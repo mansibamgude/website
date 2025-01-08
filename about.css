@@ -1,0 +1,184 @@
+/* General body styles */
+body {
+    font-family: 'Lato', sans-serif; /* Updated font for a more modern look */
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Container for the about section */
+.about-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Main heading */
+h1 {
+    font-size: 3.5rem;
+    color: #1c1e21;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+/* Description paragraph */
+.description {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #6c757d;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Secondary heading */
+h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin: 40px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery layout with grid */
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Individual work item */
+.work-item {
+    background: #fff;
+    border: 2px solid #e2e6ea;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: scaleUp 0.5s ease-out;
+}
+
+/* Hover effect on work item */
+.work-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside work item */
+.work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for image */
+.work-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Description text under the image */
+.work-item p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+    letter-spacing: 0.5px;
+}
+
+/* Button style */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect on button */
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Button focus and active states */
+.btn:focus, .btn:active {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Next button custom styling */
+.next-btn {
+    background-color: #28a745;
+}
+
+.next-btn:hover {
+    background-color: #218838;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
